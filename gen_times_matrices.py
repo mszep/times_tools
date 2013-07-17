@@ -65,9 +65,9 @@ def gen_wire_matrices(fock, overlap, offleft, offright):
 
 def write_wire_matrices(hwire, swire):
     with open('HWire.dat', 'w') as f:
-        print_matrix(hwire, f)
+        print_matrix(hwire, f, compl=True)
     with open('SWire.dat', 'w') as g:
-        print_matrix(swire, g)
+        print_matrix(swire, g, compl=True)
 
 if __name__ == '__main__':
 
