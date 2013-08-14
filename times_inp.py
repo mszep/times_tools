@@ -48,3 +48,10 @@ def gen_times_inp(hleft, hright, hwire):
     params['identical'] = bool((hleft == hright).all())
 
     write_times_inp(params)
+
+if __name__ == '__main__':
+    from matrix_io import read_square_matrix
+    hleft = read_square_matrix(open('LeftH0.dat', 'r'))
+    hright = read_square_matrix(open('RightH0.dat', 'r'))
+    hwire = read_square_matrix(open('HWire.dat', 'r'))
+    gen_times_inp(hleft, hright, hwire)
