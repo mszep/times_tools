@@ -1,0 +1,14 @@
+# times_tools
+
+Input generation tools for the TiMeS program
+
+The central script is `setup_times.py`, which reads the Fock and
+overlap matrices of the device region and automatically constructs
+input matrices (onsite and nearest-neighbour) in TiMeS format and
+a TIMES.inp configuration file.
+
+The script can accommodate three possible structures:
+
+ * different leads (default)
+ * identical leads (option --identical-leads)
+ * only leads; "wire" structure (option --leadsonly)
